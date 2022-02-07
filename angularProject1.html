@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="angularStyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <div id="container" ng-app="myApp" ng-controller="myCtrl">
+    <h1 id="header">Miles per hour conversion to kilometers per hour with angular</h1>
+      Enter mph <input type="number" ng-model="mph" size="10">
+    <p="number" ng-model="mph"/>
+    is kph {{mph*conversionFigure}}
+  </div>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.mph="";
+    $scope.conversionFigure=1.609344;
+});
+</script>
+</body>
+</html>
